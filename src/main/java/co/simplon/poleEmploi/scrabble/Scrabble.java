@@ -50,7 +50,7 @@ public class Scrabble {
 
 	public int getValeur(char c) {
 		// TODO Auto-generated method stub
-		getValeur = associationValeurLettre.get(getAssociationValeurLettre());
+		getValeur(c) = associationValeurLettre.get(getAssociationValeurLettre());
 		return 0;
 	}
 
