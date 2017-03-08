@@ -1,8 +1,10 @@
 package co.simplon.poleEmploi.scrabble;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Scrabble {
 	 public Map<String, Integer> getAssociationValeurLettre() {
@@ -44,13 +46,17 @@ public class Scrabble {
 	}                                   
 
 	private Map<String,Integer> associationValeurLettre;
-	private Integer getValeur;
-	
-	
 
-	public int getValeur(char c) {
-		// TODO Auto-generated method stub
-		getValeur(c) = associationValeurLettre.get(getAssociationValeurLettre());
+	public  int getValeur(char c) {
+		Iterator<Entry<String, Integer>> iterator = associationValeurLettre.entrySet().iterator();
+		while (iterator.hasNext()) {
+			Map.Entry entry = (Map.Entry) iterator.next();
+			String key = (String) entry.getKey();
+			String value = (String) entry.getValue();
+	 
+			System.out.println(key + " = " + value);
+		}// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
